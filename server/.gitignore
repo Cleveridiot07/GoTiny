@@ -21,6 +21,8 @@ pids/
 # Build output
 dist/
 build/
+tmp/
+temp/
 
 # OS files
 .DS_Store
@@ -29,9 +31,10 @@ Thumbs.db
 # Coverage directory
 coverage/
 
+# IDE files
+.vscode/
+.idea/
+
 # Misc
 *.tgz
-.idea/
-.vscode/
-*.sublime-workspace
-*.sublime-project
+.nyc_output/
