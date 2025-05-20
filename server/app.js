@@ -13,10 +13,12 @@ import cookieParser from "cookie-parser"
 
 dotenv.config("./.env")
 
+
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: `${frontendUrl}`,
     credentials: true 
 }));
 
@@ -35,7 +37,7 @@ app.use(errorHandler)
 
 app.listen(3000,()=>{
     connectDB()
-    console.log("Server is running on http://localhost:3000");
+    console.log("Server is running");
 })
 
 
